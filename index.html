@@ -7,10 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href='fonts.googleapis.com' rel='stylesheet'>
     <link rel="icon" href="https://fav.farm/🐰" />
 
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f0f2f5;
@@ -28,7 +30,7 @@
         }
 
         h1 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Permanent Marker', cursive;
             font-size: 3rem;
             color: #333;
             margin: 0;
@@ -68,14 +70,20 @@
             border-color: #6aaa64; /* Wordle Green */
         }
 
-        .game-icon {
+        #game-icon {
             font-size: 50px;
             margin-bottom: 10px;
             color: #6aaa64;
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
         }
-
+        #game-icon2 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            color: grey;
+            font-family: 'Permanent Marker', sans-serif;
+            font-weight: bold;
+        }
         .game-title {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
@@ -98,10 +106,16 @@
 
     <div class="game-grid">
         <a href="Wordle/index.html" class="game-card">
-            <div class="game-icon">W</div>
+            <div id="game-icon">W</div>
             <span class="game-title">Wordle</span>
             <p class="game-desc">Guess the hidden 5-letter word in 6 tries.</p>
         </a>
+        
+         <a href="Tic-Tac-Toe/index.html" class="game-card">
+             <div id="game-icon2">XO</div>
+             <span class="game-title">Tic-Tac-Toe</span>
+             <p class="game-desc">Play a game of Tic-Tac-Toe with AI.</p>
+         </a>
 
         <div class="game-card" style="opacity: 0.6; cursor: not-allowed;">
             <div class="game-icon">⏳</div>
