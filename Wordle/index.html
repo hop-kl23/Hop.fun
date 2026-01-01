@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Worlde!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Adding basic styles so you can see the grid */
+        body {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Roboto', sans-serif;
+        }
+        #textHeading, .letterCell, .guessCell {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        #generate-btn, #checkGuess {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        #textHeading {
+            color: #6aaa64;
+            font-weight: bold;
+            font: Arial;
+        }
+        #generate-btn {
+            padding: 10px;
+            width: 150px;
+            color: white;
+            border-radius: 20px;
+            background-color: #c9b458;
+            border-top: 3px solid gold;
+            border-left: 3px solid gold;
+            border-bottom: 3px solid goldenrod;
+            border-right: 3px solid goldenrod;
+            transition: transform 0.15s, color 0.15s, background-color 0.15s;
+        }
+        #generate-btn:active {
+            transform: scale(1.1);
+            background-color: #6aaa64;
+            color: gold;
+        }
+        #checkGuess {
+            padding: 7px;
+            width: 100px;
+            background-color: #6aaa64;
+            border-radius: 10px;
+            transition: transform 0.15s;
+        }
+        #generate-btn:active {
+            transform: scale(1.1);
+        }
+        
+        
+        #letterGrid { display: flex; gap: 10px; margin-bottom: 20px; }
+        #guessGrid { 
+            display: flex; 
+            gap: 10px; 
+            margin-bottom: 20px; 
+            flex-direction: column;
+        }
+        .letterCell { 
+            width: 50px; height: 50px; border: 2px solid #333; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 24px; font-weight: bold; text-transform: uppercase;
+            transition: visibility 0.3s ease-in-out, background-color 0.3s;
+        }
+        .guessCell { 
+            width: 50px; height: 50px; border: 2px solid #333; 
+            display: flex; align-items: center; justify-content: center; 
+            text-align: center;
+            font-size: 24px; font-weight: bold; text-transform: uppercase;
+            transition: background-color 0.5s;
+        }
+        #guessRow {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        #guessRow1 {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        #guessRow2 {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        #guessRow3 {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        #guessRow4 {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        
+        @keyframes shake {
+          0% { transform: translateX(0); }
+          20% { transform: translateX(-8px); }
+          40% { transform: translateX(8px); }
+          60% { transform: translateX(-8px); }
+          80% { transform: translateX(8px); }
+          100% { transform: translateX(0); }
+        }
+        
+        .shake-animation {
+          animation: shake 0.4s ease-in-out;
+        }
+        
+        .correct { background-color: #6aaa64 !important; color: white !important; }
+        .present { background-color: #c9b458 !important; color: white !important; }
+        .absent  { background-color: #787c7e !important; color: white !important; }
+
+    </style>
+</head>
+<body>
+
+    <h1 id="textHeading">Wordle!</h1>
+    
+    <div id="letterGrid">
+        <div class="letterCell"></div>
+        <div class="letterCell"></div>
+        <div class="letterCell"></div>
+        <div class="letterCell"></div>
+        <div class="letterCell"></div>
+    </div>
+
+    <div id="guessGrid"></div>
+
+    <button id="checkGuess">Check</button>
+    <br>
+    <button id="generate-btn">New Word</button>
+    
+    <script type="module" src="module.js"></script>
+
+    
+    <script type="module" src="module.js"></script>
+
+</body>
+</html>
