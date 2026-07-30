@@ -74,7 +74,6 @@ function showNewWord() {
     letterCells.forEach((cell, i) => {
         cell.textContent = letters[i];
         cell.style.visibility = 'hidden'; // Hide the answer by default!
-        cell.style.backgroundColor = '#538d4e';
         cell.id = `Lettercell-${i}`;
     });
 
